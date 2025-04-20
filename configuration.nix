@@ -118,17 +118,15 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   	vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  	wget
-	pkgs.docker
-    	pkgs.docker-compose
-	pkgs.home-manager
-	pkgs.fish
-    (pkgs.writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
+    docker
+    docker-compose
+	  home-manager
+	  fish
+    (writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
       [General]
       background=/etc/nixos/nixchan.jpg
     '')
   ];
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -139,12 +137,14 @@
   # };
 
   # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    settings.X11Forwarding = true;
+  };
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 22 6000 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
