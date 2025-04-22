@@ -11,6 +11,8 @@
   home.packages = with pkgs; [
     git
     wget
+    sshpass
+    tree
     sl
     cowsay
     lolcat
