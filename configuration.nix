@@ -46,7 +46,19 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-    
+
+  # enabling dwm
+  # services.xserver.windowManager.dwm.enable = true;
+  # services.xserver.displayManager.lightdm = {
+  #   enable = true;
+  #   greeters.gtk = {
+  #     enable = true;
+  #     extraConfig = ''
+  #       background=/opt/pictures/walnix/nixchan.jpg
+  #     '';
+  #   };
+  # };
+  
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -122,7 +134,7 @@
 	  fish
     (writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
       [General]
-      background=/etc/nixos/nixchan.jpg
+      background=/opt/pictures/walnix/nixchan.jpg
     '')
   ];
 

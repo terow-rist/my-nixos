@@ -17,10 +17,16 @@
     cowsay
     lolcat
     neofetch
+    st
+    dmenu
+    lightdm
+    lightdm-gtk-greeter
+    dwm
     go
     postman
     vscode
     gnumake
+    gcc
     man-pages
     hugo
     cloudflared
