@@ -44,20 +44,20 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = false;
+  services.desktopManager.plasma6.enable = false;
 
   # enabling dwm
-  # services.xserver.windowManager.dwm.enable = true;
-  # services.xserver.displayManager.lightdm = {
-  #   enable = true;
-  #   greeters.gtk = {
-  #     enable = true;
-  #     extraConfig = ''
-  #       background=/opt/pictures/walnix/nixchan.jpg
-  #     '';
-  #   };
-  # };
+  services.xserver.windowManager.dwm.enable = true;
+  services.xserver.displayManager.lightdm = {
+    enable = true;
+    greeters.gtk = {
+      enable = true;
+      extraConfig = ''
+        background=/opt/pictures/walnix/nixchan.jpg
+      '';
+    };
+  };
   
 
   # Configure keymap in X11
