@@ -22,6 +22,8 @@
     lightdm
     lightdm-gtk-greeter
     dwm
+    waybar
+    kitty
     go
     postman
     vscode
@@ -68,6 +70,17 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "terow-rist";
+    userEmail = "feeerhd.342@gmail.com";
+    aliases = {
+      al = "git add .";
+      cm = "!gcm() { git commit -m \"$*\"; }; gcm";
+      p = "!git pull && push";
+    };
   };
 
   home.enableNixpkgsReleaseCheck = true;
