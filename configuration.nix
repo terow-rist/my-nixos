@@ -48,7 +48,12 @@
   services.desktopManager.plasma6.enable = false;
 
   # enabling dwm
-  services.xserver.windowManager.dwm.enable = true;
+  services.xserver.windowManager.dwm = {
+    enable = true;
+    package = pkgs.dwm.overrideAttrs {
+      src = ./dwm;
+    };
+  };
   services.xserver.displayManager.lightdm = {
     enable = true;
     greeters.gtk = {
