@@ -91,11 +91,11 @@ static const Key keys[] = {
 	
 	// custom
 	{ 0,             				XK_Print, spawn,           {.v = flameshot } },
-	{ 0,                            XF86XK_AudioMute,           spawn,          SHCMD("wpctl set-mute @DEFAULT_SINK@ toggle") },
-	{ 0,                            XF86XK_AudioLowerVolume,    spawn,          SHCMD("wpctl set-volume @DEFAULT_SINK@ 5%-") },
-	{ 0,                            XF86XK_AudioRaiseVolume,    spawn,          SHCMD("wpctl set-volume @DEFAULT_SINK@ 5%+") },
-	{ 0,                            XF86XK_MonBrightnessUp,     spawn,          SHCMD("brightnessctl set +5%") },
-	{ 0,                            XF86XK_MonBrightnessDown,   spawn,          SHCMD("brightnessctl set 5%-") },
+	{ 0,                            XF86XK_AudioMute,           spawn,          SHCMD("wpctl set-mute @DEFAULT_SINK@ toggle && notify-send Mute/Unmute") },
+	{ 0, XF86XK_AudioLowerVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_SINK@ 5%- && vol=$(wpctl get-volume @DEFAULT_SINK@ | awk '{print int($2*100)}'); notify-send -u low -t 2000 'Volume' \"$vol%\" -h int:value:$vol") },
+	{ 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_SINK@ 5%+ && vol=$(wpctl get-volume @DEFAULT_SINK@ | awk '{print int($2*100)}'); notify-send -u low -t 2000 'Volume' \"$vol%\" -h int:value:$vol") },
+	{ 0, XF86XK_MonBrightnessUp, spawn, SHCMD("brightnessctl set +5% && bright=$(brightnessctl --machine-readable | awk -F, '{print int($4)}'); notify-send -u low -t 2000 'Brightness' \"$bright%\" -h int:value:$bright") },
+	{ 0, XF86XK_MonBrightnessDown, spawn, SHCMD("brightnessctl set 5%- && bright=$(brightnessctl --machine-readable | awk -F, '{print int($4)}'); notify-send -u low -t 2000 'Brightness' \"$bright%\" -h int:value:$bright") },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)

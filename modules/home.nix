@@ -23,6 +23,8 @@
     lightdm-gtk-greeter
     dunst
     libnotify
+    dwmblocks
+    betterlockscreen
     brightnessctl 
     flameshot
     kitty
