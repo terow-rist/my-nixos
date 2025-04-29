@@ -50,8 +50,9 @@
   # enabling dwm
   services.xserver.windowManager.dwm = {
     enable = true;
-    package = pkgs.dwm.overrideAttrs {
-      src = ./dwm;
+    package = pkgs.dwm.override {
+      conf = ./modules/config.h;
+      # patches
     };
   };
   services.xserver.displayManager.lightdm = {
