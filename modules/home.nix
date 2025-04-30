@@ -17,13 +17,11 @@
     cowsay
     lolcat
     neofetch
-    st
+    feh
     dmenu
-    lightdm
-    lightdm-gtk-greeter
+    acpi
     dunst
     libnotify
-    dwmblocks
     betterlockscreen
     brightnessctl 
     flameshot
@@ -41,7 +39,7 @@
     nginx
   ];
 
-  
+
   home.sessionVariables = {
     # EDITOR = "emacs";
   };

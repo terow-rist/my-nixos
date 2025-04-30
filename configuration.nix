@@ -55,16 +55,13 @@
       # patches
     };
   };
-  services.xserver.displayManager.lightdm = {
-    enable = true;
-    greeters.gtk = {
-      enable = true;
-      extraConfig = ''
-        background=/opt/pictures/walnix/nixchan.jpg
-      '';
-    };
-  };
-  
+
+  # enabling lockscreen
+  programs.i3lock.enable = true;
+  security.pam.services.i3lock = {};
+
+  # enabling ly DM 
+  services.displayManager.ly.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -138,10 +135,6 @@
     docker-compose
 	  home-manager
 	  fish
-    (writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
-      [General]
-      background=/opt/pictures/walnix/nixchan.jpg
-    '')
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
