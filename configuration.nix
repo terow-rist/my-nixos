@@ -63,6 +63,16 @@
   # enabling ly DM 
   services.displayManager.ly.enable = true;
 
+  # cursor resize
+  services.xserver = {
+    upscaleDefaultCursor = true;
+    dpi = 120;
+  };
+  environment.variables = {
+    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    XCURSOR_SIZE = "64"; # default 16 I think
+  };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us,ru";
@@ -132,7 +142,6 @@
   environment.systemPackages = with pkgs; [
   	vim 
     docker
-    docker-compose
 	  home-manager
 	  fish
   ];
