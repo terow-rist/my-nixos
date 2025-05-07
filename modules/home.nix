@@ -29,6 +29,7 @@
     go
     postman
     vscode
+    code-cursor
     gnumake
     gcc
     man-pages

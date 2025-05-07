@@ -19,20 +19,12 @@
         specialArgs = {inherit inputs;}; 
         modules = [
             ./configuration.nix
-            home-manager.nixosModules.home-manager 
-            {
-                home-manager.useUserPackages = true;
-                home-manager.users.terow-rist = import ./modules/home.nix;
-            }
             ];
     };
 
-    homeConfigurations = {
-      "terow-rist" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.terow-rist = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = {inherit inputs; }; 
         modules = [ ./modules/home.nix ];
-      };
     };
   };
 }
