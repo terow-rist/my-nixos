@@ -25,6 +25,7 @@
     betterlockscreen
     brightnessctl 
     flameshot
+    alacritty
     kitty
     go
     postman
@@ -38,6 +39,9 @@
     python314
     ansible
     nginx
+    (dwm.override {
+      conf = ./config.h;
+    })
   ];
 
 
