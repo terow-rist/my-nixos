@@ -26,7 +26,6 @@
     brightnessctl 
     flameshot
     alacritty
-    kitty
     go
     postman
     vscode

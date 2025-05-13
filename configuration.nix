@@ -50,10 +50,10 @@
   # enabling dwm
   services.xserver.windowManager.dwm = {
     enable = true;
-    package = pkgs.dwm.override {
-      conf = ./modules/config.h;
-      # patches
-    };
+    # package = pkgs.dwm.override {
+    #   conf = ./modules/config.h;
+    #   # patches
+    # }; 
   };
 
   # enabling lockscreen
@@ -104,10 +104,10 @@
     isNormalUser = true;
     description = "Madikozha Issayev";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
-    packages = with pkgs; [
-      kdePackages.kate
-    #  thunderbird
-    ];
+    # packages = with pkgs; [
+    #   kdePackages.kate
+    # #  thunderbird
+    # ];
     shell = pkgs.fish;
   };
 
