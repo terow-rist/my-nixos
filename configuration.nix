@@ -72,6 +72,10 @@
     options = "grp:win_space_toggle";
   };
 
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  services.blueman.enable = true;
+  
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
