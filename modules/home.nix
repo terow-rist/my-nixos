@@ -11,6 +11,8 @@
   home.packages = with pkgs; [
     git
     wget
+    dig
+    inetutils
     sshpass
     tree
     sl
@@ -32,6 +34,8 @@
     gnumake
     gcc
     man-pages
+    trashy
+    busybox
     hugo
     cloudflared
     python314
@@ -41,6 +45,17 @@
       conf = ./config.h;
     })
   ];
+
+  # plan for future :()
+  # programs.vscode = {
+  #   enable = true;
+  #   extensions = with pkgs.vscode-extensions; [
+  #     dracula-theme.theme-dracula
+  #     vscodevim.vim
+  #     yzhang.markdown-all-in-one
+  #   ];
+  # };
+
 
 
   home.sessionVariables = {
