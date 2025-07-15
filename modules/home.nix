@@ -12,6 +12,7 @@
     git
     wget
     dig
+    htop
     inetutils
     sshpass
     tree
@@ -35,7 +36,7 @@
     gcc
     man-pages
     trashy
-    busybox
+    stacer
     hugo
     cloudflared
     python314
