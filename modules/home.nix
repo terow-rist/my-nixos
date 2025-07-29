@@ -21,15 +21,19 @@
     lolcat
     neofetch
     feh
-    dmenu
-    acpi
-    dunst
+    waybar
+    fuzzel
+    swaybg
+    swaylock
+    mako
+    wl-clipboard
     libnotify
-    betterlockscreen
+    acpi
     brightnessctl 
     flameshot
     alacritty
     go
+    gopls
     postman
     vscode
     gnumake
@@ -42,10 +46,10 @@
     python314
     ansible
     nginx
-    (dwm.override {
-      conf = ./config.h;
-    })
   ];
+
+  # Install firefox.
+  programs.firefox.enable = true;
 
   # plan for future :()
   # programs.vscode = {

@@ -39,38 +39,37 @@
     LC_TIME = "kk_KZ.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-
-  # enabling dwm
-  services.xserver.windowManager.dwm = {
+  # Sway wayland porn
+  programs.sway = {
     enable = true;
+    wrapperFeatures.gtk = true;
   };
 
-  # enabling lockscreen
-  programs.i3lock.enable = true;
-  security.pam.services.i3lock = {};
+  # enabling touchpad gestures or proper input 
+  services.libinput.enable = true;
 
-  # enabling ly DM 
-  services.displayManager.ly.enable = true;
+  # lockscreen with swaylock
+  security.pam.services.swaylock = {};
+  
+  # Greetd lock in screen
+  services.greetd.enable = true;
+  services.greetd.settings = {
+     default_session = {
+       command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
+     };
+  };  
 
-  # cursor resize
-  services.xserver = {
-    upscaleDefaultCursor = true;
-    dpi = 120;
-  };
   environment.variables = {
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     XCURSOR_SIZE = "64"; # default 16 I think
   };
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us,ru";
-    variant = "";
-    options = "grp:win_space_toggle";
-  };
+    services.xserver.xkb = {
+      layout = "us,ru";
+      variant = "";
+      options = "grp:win_space_toggle";
+    };
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
@@ -102,13 +101,7 @@
     shell = pkgs.fish;
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # Install fish
+   # Install fish
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
@@ -117,6 +110,10 @@
       end
     '';
   };
+
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
   
   # NIX_PATH
   nix.nixPath = [
@@ -147,10 +144,7 @@
 
   # List services that you want to enable:
   # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-    settings.X11Forwarding = true;
-  };
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22 ];
