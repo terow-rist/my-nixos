@@ -30,6 +30,7 @@
     flameshot
     alacritty
     go
+    gopls
     postman
     vscode
     gnumake
