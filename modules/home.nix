@@ -41,6 +41,9 @@
     hugo
     cloudflared
     python314
+    lsof
+    kubernetes
+    minikube
     ansible
     nginx
     (dwm.override {
