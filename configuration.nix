@@ -22,8 +22,8 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Asia/Astana";
-
+  time.timeZone = "Asia/Aqtobe";
+  time.hardwareClockInLocalTime = true;
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
 
