@@ -151,6 +151,8 @@
 
   environment.systemPackages = with pkgs; [
   	vim 
+    mcron
+    inetutils
     docker
 	  home-manager
 	  fish

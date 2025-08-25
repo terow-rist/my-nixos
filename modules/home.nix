@@ -9,11 +9,11 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    telegram-desktop
     git
     wget
     dig
     htop
-    inetutils
     sshpass
     tree
     sl
