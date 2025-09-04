@@ -18,13 +18,13 @@
         inherit system;
         specialArgs = {inherit inputs;}; 
         modules = [
-            ./configuration.nix
-            ];
+            ./hosts/yoga7/configuration.nix
+        ];
     };
 
     homeConfigurations.terow-rist = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
-        modules = [ ./modules/home.nix ];
+        modules = [ ./home-manager/home.nix ];
     };
   };
 }

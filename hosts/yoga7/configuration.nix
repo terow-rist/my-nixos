@@ -5,6 +5,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./local-pkgs.nix
     ];
 
   # Bootloader.
@@ -148,15 +149,6 @@
 
   # Docker install/enabling
   virtualisation.docker.enable = true;
-
-  environment.systemPackages = with pkgs; [
-  	vim 
-    mcron
-    inetutils
-    docker
-	  home-manager
-	  fish
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
