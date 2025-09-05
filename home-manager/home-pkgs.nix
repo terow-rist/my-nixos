@@ -4,6 +4,7 @@
           
     home.packages = with pkgs; [
     telegram-desktop
+    helix
     git
     wget
     dig
@@ -41,7 +42,7 @@
     ansible
     nginx
     (dwm.override {
-    conf = ./config.h;
+    conf = ./modules/config.h;
     })
     ];
 
