@@ -5,5 +5,9 @@
     settings = {
       theme = "base16_terminal";
     };
+    extraPackages = with pkgs; [
+      nixd
+      gopls
+    ];
   };    
 }
