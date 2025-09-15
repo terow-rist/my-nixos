@@ -17,6 +17,8 @@
     feh
     dmenu
     acpi
+    libreoffice
+    pcmanfm
     dunst
     libnotify
     betterlockscreen
