@@ -42,9 +42,9 @@
     minikube
     ansible
     nginx
-    (dwm.override {
-    conf = ./modules/config.h;
-    })
+    # (dwm.override {
+    # conf = ./modules/config.h;
+    # })
     ];
 
 }

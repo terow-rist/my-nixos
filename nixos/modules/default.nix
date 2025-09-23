@@ -4,6 +4,7 @@
         ./bluetooth.nix
         ./boot.nix
         ./env.nix
+        ./hyprland.nix
         ./i18n.nix
         ./lock.nix
         ./net.nix

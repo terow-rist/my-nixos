@@ -1,6 +1,11 @@
+{ pkgs, ... }:
 {
-    # enabling ly DM 
-    security.pam.services.i3lock = {};
-    programs.i3lock.enable = true;
-    services.displayManager.ly.enable = true;
+    services.greetd = {
+      enable = true;
+      settings = {
+        default_session =  {
+          command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        };
+      };
+    };
 }
