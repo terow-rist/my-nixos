@@ -11,12 +11,6 @@
         dpi = 120;
     };
 
-    # cursor resize
-    services.xserver = {
-        upscaleDefaultCursor = true;
-        dpi = 120;
-    };
-
     # Configure keymap in X11
     services.xserver.xkb = {
         layout = "us,ru";
@@ -28,7 +22,7 @@
     services.printing.enable = true;
 
     # Enable touchpad support (enabled default in most desktopManager).
-    services.xserver.libinput.enable = true;
+    services.libinput.enable = true;
 
     services.openssh = {
         enable = true;

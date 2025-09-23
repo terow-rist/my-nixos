@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, ... }:
 {
     users.users.terow-rist = {
         isNormalUser = true;

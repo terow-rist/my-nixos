@@ -18,7 +18,7 @@
         inherit system;
         specialArgs = {inherit inputs;}; 
         modules = [
-            ./hosts/yoga7/configuration.nix
+            ./hosts/nixos/configuration.nix
         ];
     };
 
