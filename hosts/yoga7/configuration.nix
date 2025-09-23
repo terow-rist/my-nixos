@@ -11,6 +11,8 @@
 
   # Docker install/enabling
   virtualisation.docker.enable = true;
+  
+  networking.hostName = "nixos"; 
 
   system.stateVersion = "24.11";
 
