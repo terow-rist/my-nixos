@@ -3,7 +3,7 @@
 {
   imports = [
     ./home-pkgs.nix
-    ./modules/helix.nix
+    ./modules
   ];
 
   home = {
