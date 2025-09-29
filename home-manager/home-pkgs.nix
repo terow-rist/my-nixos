@@ -29,7 +29,6 @@
         swaynotificationcenter    # Notification daemon (replaces dunst)
         wlogout            # Logout menu
         hyprlock
-        hyprpaper
                 
         # Wayland utilities
         wl-clipboard       # Clipboard utilities (wl-copy, wl-paste)
@@ -73,11 +72,7 @@
         wayland-protocols  # Wayland protocols
         xdg-desktop-portal-hyprland  # Desktop portal for Hyprland
         
-        # Fonts (important for Waybar and overall UI)
-        font-awesome
-                
         # Optional but useful
-        gammastep          # Blue light filter (replaces redshift)
         blueman            # Bluetooth manager
         networkmanagerapplet  # Network management
         
