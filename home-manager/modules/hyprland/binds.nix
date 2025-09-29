@@ -7,11 +7,17 @@
             "$mainMod, E, exec, $fileManager"
             "$mainMod, F, togglefloating,"
             "$mainMod, R, exec, $menu"
-            "$mainMod, P, pseudo," #dwindle
+            "$mainMod, P, togglefloating,"
             "$mainMod, J, layoutmsg, orientationcycle"
             "$mainMod, TAB, focuscurrentorlast"
             "$mainMod, V, exec, cliphist list | $menu --dmenu | cliphist decode | wl-copy"
+            ", Print, exec, grimblast --notify --freeze copysave area"
 
+            # Resizeing windows                   X  Y
+            "$mainMod CTRL, left,  resizeactive, -60 0"
+            "$mainMod CTRL, right, resizeactive,  60 0"
+            "$mainMod CTRL, up,    resizeactive,  0 -60"
+            "$mainMod CTRL, down,  resizeactive,  0  60"
 
             # swap windows
             "$mainMod SHIFT, left,  swapwindow, l"

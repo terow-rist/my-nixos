@@ -1,7 +1,7 @@
 {
     imports = [
         ./hyprland
-        # ./waybar
+        ./waybar
         ./alacritty.nix
         ./helix.nix
         ./stylix.nix
