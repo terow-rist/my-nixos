@@ -29,6 +29,7 @@
       wofi.enable = false;
       hyprland.enable = false;
       hyprlock.enable = false;
+      alacritty.enable = false;
     };
 
     cursor = {
@@ -63,7 +64,7 @@
       };
 
       sizes = {
-        terminal = 13;
+        # terminal = 13;
         applications = 11;
       };
     };

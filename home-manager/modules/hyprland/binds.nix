@@ -7,8 +7,8 @@
             "$mainMod, E, exec, $fileManager"
             "$mainMod, F, togglefloating,"
             "$mainMod, R, exec, $menu"
-            "$mainMod, P, pseudo,"
-            "$mainMod, J, togglesplit,"
+            "$mainMod, P, pseudo," #dwindle
+            "$mainMod, J, layoutmsg, orientationcycle"
             "$mainMod, TAB, focuscurrentorlast"
             "$mainMod, V, exec, cliphist list | $menu --dmenu | cliphist decode | wl-copy"
 
