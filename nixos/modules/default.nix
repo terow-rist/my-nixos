@@ -8,7 +8,6 @@
         ./lock.nix
         ./net.nix
         ./nix.nix
-        ./programs.nix
         ./services.nix
         ./time.nix
         ./users.nix

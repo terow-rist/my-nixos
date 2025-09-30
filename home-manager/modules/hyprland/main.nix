@@ -94,11 +94,6 @@
                 kb_options = "grp:win_space_toggle";
             };
 
-            gestures = {
-                workspace_swipe = false;
-            };
-
-
             dwindle = {
                 pseudotile = true;
                 preserve_split = true;

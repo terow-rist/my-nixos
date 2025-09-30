@@ -30,10 +30,12 @@
     image = ../../images/anime_skull.png;
     
     targets = {
-      helix.enable = false;
-      waybar.enable = true;
-      wofi.enable = false;
       hyprland.enable = true;
+      waybar.enable = true;
+
+      firefox.enable = false;
+      helix.enable = false;
+      wofi.enable = false;
       hyprlock.enable = false;
       alacritty.enable = false;
     };

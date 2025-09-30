@@ -12,6 +12,7 @@
             "$mainMod, TAB, focuscurrentorlast"
             "$mainMod, V, exec, cliphist list | $menu --dmenu | cliphist decode | wl-copy"
             ", Print, exec, grimblast --notify --freeze copysave area"
+            "$mainMod, L, exec, hyprlock & systemctl suspend"
 
             # Resizeing windows                   X  Y
             "$mainMod CTRL, left,  resizeactive, -60 0"
