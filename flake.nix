@@ -13,9 +13,11 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ragenix.url = "github:yaxitech/ragenix";
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs:
+  outputs = { nixpkgs, home-manager, ragenix, ... }@inputs:
   let 
     system = "x86_64-linux";
   in
@@ -25,6 +27,7 @@
         specialArgs = {inherit inputs;}; 
         modules = [
             ./hosts/nixos/configuration.nix
+            ragenix.nixosModules.default
         ];
     };
 

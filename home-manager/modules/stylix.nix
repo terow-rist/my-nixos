@@ -27,7 +27,7 @@
     enable = true;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-    image = ../../images/anime_skull.png;
+    image = ../../images/vabd.jpg;
     
     targets = {
       hyprland.enable = true;
