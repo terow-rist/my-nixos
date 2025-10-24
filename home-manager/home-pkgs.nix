@@ -23,6 +23,8 @@
         man-pages
         ragenix
         killall
+        zip
+        unzip
         
         # Wayland/Hyprland specific replacements
         waybar             
@@ -78,8 +80,5 @@
         # Optional but useful
         blueman            # Bluetooth manager
         networkmanagerapplet  # Network management
-        
-        # Office & productivity (keep these)
-        libreoffice
     ];
 }
