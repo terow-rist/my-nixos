@@ -91,11 +91,6 @@ in
       margin-left: 15px;
     }
 
-    #custom-power-menu {
-      padding-right: 2px;
-      margin-right: 5px;
-    }
-
     #custom-launcher {
       font-size: 20px;
       color: ${text_color};

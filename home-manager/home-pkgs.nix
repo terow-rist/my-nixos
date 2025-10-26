@@ -33,7 +33,6 @@
         swaynotificationcenter    # Notification daemon (replaces dunst)
         wlogout            # Logout menu
         hyprlock
-        wofi-power-menu               
 
         # Wayland utilities
         wl-clipboard       # Clipboard utilities (wl-copy, wl-paste)

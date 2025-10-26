@@ -7,5 +7,6 @@
         ./fish.nix
         ./helix.nix
         ./stylix.nix
+        ./wofi.nix
     ];
 }

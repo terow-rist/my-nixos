@@ -152,8 +152,8 @@ in
     };
     "custom/launcher" = {
       format = "";
-      on-click = "random-wallpaper";
-      on-click-right = "rofi -show drun";
+      on-click = "random-wallpaper"; #fix in future
+      on-click-right = "wofi --show drun";
       tooltip = "true";
       tooltip-format = "Random Wallpaper";
     };
@@ -177,12 +177,6 @@ in
       on-click = "swaync-client -t -sw";
       on-click-right = "swaync-client -d -sw";
       escape = true;
-    };
-    "custom/power-menu" = {
-      tooltip = true;
-      tooltip-format = "Power menu";
-      format = "<span foreground='${red}'> </span>";
-      on-click = "power-menu";
     };
   };
 }
