@@ -9,32 +9,54 @@
         inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    ragenix = {
+      url = "github:yaxitech/ragenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    ragenix.url = "github:yaxitech/ragenix";
   };
 
   outputs = { nixpkgs, home-manager, ragenix, ... }@inputs:
   let 
     system = "x86_64-linux";
-  in
-   {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {inherit inputs;}; 
+    homeStateVersion = "24.05";
+    user = "terow-rist";
+    hosts = [
+      { hostname = "yoga"; stateVersion = "24.11"; }
+      # { hostname = "lion"; stateVersion = "25.05"; }
+    ];
+
+    makeSystem = { hostname, stateVersion }:
+      nixpkgs.lib.nixosSystem {
+        system = system;
+        specialArgs = {
+          inherit inputs stateVersion hostname user;
+        };
+
         modules = [
-            ./hosts/nixos/configuration.nix
-            ragenix.nixosModules.default
+          ./hosts/${hostname}/configuration.nix
+          ragenix.nixosModules.default
         ];
     };
 
-    homeConfigurations.terow-rist = home-manager.lib.homeManagerConfiguration {
+  in
+   {
+    nixosConfigurations = nixpkgs.lib.foldl'
+        (configs: host:
+          configs // {
+            "${host.hostname}" = makeSystem {
+              inherit (host) hostname stateVersion;
+            };
+          }) { } hosts;
+
+    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = {
-          inherit inputs;
+          inherit inputs homeStateVersion user;
         };
         modules = [ ./home-manager/home.nix ];
     };

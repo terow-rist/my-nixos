@@ -25,6 +25,8 @@
         killall
         zip
         unzip
+        tcpdump
+        wireshark
         
         # Wayland/Hyprland specific replacements
         waybar             

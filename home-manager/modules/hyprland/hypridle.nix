@@ -1,6 +1,6 @@
 {
   services.hypridle = {
-    enable = true;
+    enable = false;
     settings = {
       general = {
         before_sleep_cmd = "loginctl lock-session";
