@@ -25,7 +25,10 @@
         killall
         zip
         unzip
-        
+        tcpdump
+        wireshark
+        libcap
+
         # Wayland/Hyprland specific replacements
         waybar             
         wofi               
@@ -69,7 +72,6 @@
         
         # System monitoring & utilities
         btop               # Better than htop
-        stacer             # garbage cleaner
         
         # Wayland-specific tools
         wayland-utils      # Wayland development utilities
