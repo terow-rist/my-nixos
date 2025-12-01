@@ -1,4 +1,4 @@
 {
-    time.timeZone = "Asia/Aqtobe";
+    time.timeZone = "Asia/Almaty";
     time.hardwareClockInLocalTime = true;
 }

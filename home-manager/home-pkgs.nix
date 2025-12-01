@@ -5,6 +5,7 @@
     home.packages = with pkgs; [
         # Communication & Web
         telegram-desktop
+        discord
 
         # System utilities (keep these - they work everywhere)
         git
@@ -45,7 +46,7 @@
         brightnessctl      # Brightness control (keep this)
         pamixer            # Audio control
         playerctl          # Media player control
-        
+        jellyfin-ffmpeg
         # File management
         xfce.thunar        # File manager (better than pcmanfm for Wayland)
         # nemo             # Alternative file manager
