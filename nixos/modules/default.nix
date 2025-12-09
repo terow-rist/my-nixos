@@ -7,10 +7,11 @@
         ./i18n.nix
         ./lock.nix
         ./net.nix
-        # ./wg.nix
         ./nix.nix
         ./services.nix
         ./time.nix
+        ./ts.nix
         ./users.nix
+        # ./wg.nix
     ];
 }
