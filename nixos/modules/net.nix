@@ -5,7 +5,7 @@
         allowedTCPPorts = [ 22 ];
         allowedUDPPorts = [ 51820 ];  
         trustedInterfaces = [ "wg0" "tailscale0" ];
-        allowPing = true;
       };
+      nameservers = [ "10.10.5.2" ];
     };   
 }

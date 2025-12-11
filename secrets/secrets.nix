@@ -4,4 +4,6 @@ let
 in
 {
   "wg-yoga.age".publicKeys = hosts;
+  "wg-jubber.age".publicKeys = hosts;
+  "wg-jubber-presh.age".publicKeys = hosts;
 }

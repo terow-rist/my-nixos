@@ -12,6 +12,6 @@
         ./time.nix
         ./ts.nix
         ./users.nix
-        # ./wg.nix
+        ./wg.nix
     ];
 }
