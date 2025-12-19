@@ -3,6 +3,7 @@
         ./audio.nix
         ./bluetooth.nix
         ./boot.nix
+        ./gpg.nix
         ./hyprland.nix
         ./i18n.nix
         ./lock.nix

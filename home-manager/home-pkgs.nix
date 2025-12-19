@@ -54,8 +54,6 @@
         xfce.thunar        # File manager (better than pcmanfm for Wayland)
         pass-wayland
         gnupg
-        pinentry-tty
-        seahorse
                 
         # Terminal
         alacritty
