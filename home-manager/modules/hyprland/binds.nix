@@ -14,6 +14,7 @@
             ", Print, exec, grimblast --notify --freeze copysave area"
             "$mainMod, L, exec, hyprlock & systemctl suspend"
             "$mainMod, H, exec, pkill -SIGUSR1 -x .waybar-wrapped"
+            "$mainMod, X, exec, passmenu"
 
             # Resizeing windows                   X  Y
             "$mainMod CTRL, left,  resizeactive, -60 0"

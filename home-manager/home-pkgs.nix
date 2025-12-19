@@ -52,8 +52,10 @@
         jellyfin-ffmpeg
         # File management
         xfce.thunar        # File manager (better than pcmanfm for Wayland)
-        pass
+        pass-wayland
         gnupg
+        pinentry-tty
+        seahorse
                 
         # Terminal
         alacritty
