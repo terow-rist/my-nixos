@@ -40,7 +40,8 @@
           {
             publicKey = "D3/fgyPIawaw954/xeYTJDoXgC28r2LBBC1M6sOJ41k=";
             allowedIPs = [
-              "10.10.5.0/24"
+              "10.10.5.2/32"
+              "10.10.5.3/32"
               "10.10.10.0/24"
             ];
             endpoint = "45.86.82.14:13231";

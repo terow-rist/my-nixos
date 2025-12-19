@@ -10,8 +10,9 @@
         ./nix.nix
         ./services.nix
         ./time.nix
-        ./ts.nix
+        # ./ts.nix
         ./users.nix
         ./wg.nix
+        ./7g.nix
     ];
 }

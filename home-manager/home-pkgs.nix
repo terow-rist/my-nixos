@@ -29,6 +29,9 @@
         tcpdump
         wireshark
         libcap
+        rsync
+        nmap
+        openfortivpn
 
         # Wayland/Hyprland specific replacements
         waybar             
@@ -49,8 +52,9 @@
         jellyfin-ffmpeg
         # File management
         xfce.thunar        # File manager (better than pcmanfm for Wayland)
-        # nemo             # Alternative file manager
-        
+        pass
+        gnupg
+                
         # Terminal
         alacritty
         
@@ -61,7 +65,7 @@
         vscode
         gnumake
         gcc
-        python314
+        python3
         hugo
         cloudflared
         
