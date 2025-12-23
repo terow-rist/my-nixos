@@ -27,7 +27,7 @@
     enable = true;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-    image = ../../images/vabd.jpg;
+    image = ../../images/black-hole.png;
     
     targets = {
       hyprland.enable = true;
