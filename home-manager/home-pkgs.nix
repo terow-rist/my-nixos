@@ -50,8 +50,7 @@
         pamixer            # Audio control
         playerctl          # Media player control
         jellyfin-ffmpeg
-        # File management
-        xfce.thunar        # File manager (better than pcmanfm for Wayland)
+        thunar        # File manager (better than pcmanfm for Wayland)
         pass-wayland
         gnupg
                 

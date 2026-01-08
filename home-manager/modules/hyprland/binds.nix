@@ -15,6 +15,7 @@
             "$mainMod, L, exec, hyprlock & systemctl suspend"
             "$mainMod, H, exec, pkill -SIGUSR1 -x .waybar-wrapped"
             "$mainMod, X, exec, passmenu"
+            "$mainMod, K, exec, hyprpaper-random"
 
             # Resizeing windows                   X  Y
             "$mainMod CTRL, left,  resizeactive, -60 0"

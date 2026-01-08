@@ -2,7 +2,6 @@
 {
   imports = [ inputs.stylix.homeModules.stylix ];
   
-  # Enable font configuration
   fonts.fontconfig.enable = true;
   
   home.packages = with pkgs; [
@@ -18,21 +17,17 @@
     # Nerd Fonts (consolidated)
     nerd-fonts.jetbrains-mono
     nerd-fonts.symbols-only
-    
-    # Optional: Hebrew support
-    # texlivePackages.hebrew-fonts
   ];
   
   stylix = {
     enable = true;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-    image = ../../images/black-hole.png;
     
     targets = {
       hyprland.enable = true;
       waybar.enable = true;
-
+      hyprpaper.enable = false;
       firefox.enable = false;
       helix.enable = false;
       wofi.enable = false;
@@ -46,7 +41,7 @@
       package = pkgs.bibata-cursors;
     };
     
-    iconTheme = {
+    icons = {
       enable = true;
       package = pkgs.papirus-icon-theme;
       dark = "Papirus-Dark";
