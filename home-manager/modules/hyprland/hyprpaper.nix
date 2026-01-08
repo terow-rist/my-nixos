@@ -30,10 +30,6 @@ in
       splash = false;
 
       preload = wallpapers;
-
-      wallpaper = [
-        ",${inputs.self}/images/black-hole.png"
-      ];
     };
   };
 }
