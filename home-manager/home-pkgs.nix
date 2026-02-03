@@ -5,7 +5,7 @@
     home.packages = with pkgs; [
         # Communication & Web
         telegram-desktop
-        discord
+        teams-for-linux
 
         # System utilities (keep these - they work everywhere)
         git
@@ -27,7 +27,6 @@
         zip
         unzip
         tcpdump
-        wireshark
         libcap
         rsync
         nmap
@@ -76,6 +75,7 @@
         
         # System monitoring & utilities
         btop               # Better than htop
+        ncdu
         
         # Wayland-specific tools
         wayland-utils      # Wayland development utilities

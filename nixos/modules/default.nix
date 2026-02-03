@@ -1,5 +1,6 @@
 {
     imports = [
+        ./7g.nix
         ./audio.nix
         ./bluetooth.nix
         ./boot.nix
@@ -14,6 +15,6 @@
         # ./ts.nix
         ./users.nix
         ./wg.nix
-        ./7g.nix
+        ./ws.nix
     ];
 }
