@@ -28,10 +28,10 @@
             };
 
             general = {
-                gaps_in = 2;
-                gaps_out = 2;
+                gaps_in = 0;
+                gaps_out = 0;
 
-                border_size = 3;
+                border_size = 2;
 
                 # https://wiki.hypr.land/Configuring/Variables/#variable-types for info about colors
                 "col.active_border" = lib.mkForce "rgba(d65d0eff) rgba(98971aff) 45deg";
@@ -44,8 +44,8 @@
             };
 
             decoration = {
-                rounding = 10;
-                rounding_power = 2;
+                rounding = 0;
+                # rounding_power = 2;
 
                 active_opacity = 1.0;
                 inactive_opacity = 1.0;

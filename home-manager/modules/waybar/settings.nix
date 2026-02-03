@@ -81,6 +81,11 @@ in
         "3" = [ ];
         "4" = [ ];
         "5" = [ ];
+        "6" = [ ];
+        "7" = [ ];
+        "8" = [ ];
+        "9" = [ ];
+        "10" = [ ];
       };
     };
     cpu = {
@@ -109,7 +114,7 @@ in
       format-disconnected = "<span foreground='${magenta}'>󰖪 </span>";
     };
     tray = {
-      icon-size = 20;
+      icon-size = 12.5;
       spacing = 8;
     };
     pulseaudio = {
