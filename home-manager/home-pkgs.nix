@@ -31,7 +31,8 @@
         rsync
         nmap
         openfortivpn
-
+        tmux
+        
         # Wayland/Hyprland specific replacements
         waybar             
         wofi               
@@ -66,7 +67,8 @@
         python3
         hugo
         cloudflared
-        
+        virtualenv
+                
         # DevOps tools (keep these)
         kubernetes
         minikube
