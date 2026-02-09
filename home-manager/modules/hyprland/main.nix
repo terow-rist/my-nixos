@@ -110,9 +110,12 @@
 
             # See https://wiki.hypr.land/Configuring/Window-Rules/ for more
             # See https://wiki.hypr.land/Configuring/Workspace-Rules/ for workspace rules
-            windowrulev2 = [
-                "suppressevent maximize, class:.*"
-                "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+            windowrule = [
+                # Suppress maximize event for all windows
+                "suppress_event maximize, match:class .*"
+
+                # XWayland helper windows: floating, no focus
+                "float on, no_focus on, match:class ^$, match:title ^$, match:xwayland true, match:fullscreen false, match:pin false"
             ];
 
         };
