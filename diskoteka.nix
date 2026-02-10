@@ -17,9 +17,8 @@
             };
           };
           
-          #use this
           luks = {
-            size = 100%;
+            size = "100%";
             content = {
               type = "luks";
               name = "cryptroot";
@@ -33,16 +32,6 @@
                   format = "ext4";
                   mountpoint = "/";
               };
-            };
-          };
-          
-          #this is just example
-          root = {
-            size = "100%";
-            content = {
-              type = "filesystem";
-              format = "ext4";
-              mountpoint = "/";
             };
           };
         };
