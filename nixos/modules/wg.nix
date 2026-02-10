@@ -1,6 +1,6 @@
 { config, ... }:
 {
-  age.identityPaths = [ "/home/terow-rist/.ssh/ed25519_github" ];
+  age.identityPaths = [ "/home/terow-rist/.ssh/terow-rist" ];
   age.secrets = {
     wg-yoga.file = ../../secrets/wg-yoga.age;
     wg-jubber.file = ../../secrets/wg-jubber.age;
