@@ -6,5 +6,5 @@
         enable = true;
         settings.X11Forwarding = false;
     };
-
+    services.fstrim.enable = true;
 }
