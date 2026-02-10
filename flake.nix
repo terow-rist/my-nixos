@@ -34,6 +34,15 @@
         ];
     };
 
+    nixosConfigurations.te14 = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {inherit inputs;}; 
+        modules = [
+            ./hosts/te14/configuration.nix
+            ragenix.nixosModules.default
+        ];
+    };
+
     homeConfigurations.terow-rist = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = {
