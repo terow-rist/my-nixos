@@ -11,7 +11,7 @@
             "$mainMod, J, layoutmsg, orientationcycle"
             "$mainMod, TAB, focuscurrentorlast"
             "$mainMod, V, exec, cliphist list | $menu --dmenu | cliphist decode | wl-copy"
-            ", Print, exec, grimblast --notify --freeze copysave area"
+            ", Print, exec, sh -c 'grimblast --notify --freeze copysave area $HOME/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png'"
             "$mainMod, L, exec, hyprlock & systemctl suspend"
             "$mainMod, H, exec, pkill -SIGUSR1 -x .waybar-wrapped"
             "$mainMod, X, exec, passmenu"
