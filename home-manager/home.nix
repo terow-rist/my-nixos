@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, stateVersion, ... }:
 
 {
   imports = [
@@ -9,7 +9,7 @@
   home = {
     username = "terow-rist";
     homeDirectory = "/home/terow-rist";
-    stateVersion = "24.05"; # this version of HM is associated with my conf.nix
+    stateVersion = stateVersion; # this version of HM is associated with my conf.nix
     enableNixpkgsReleaseCheck = true;
   };
 

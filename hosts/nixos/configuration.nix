@@ -1,6 +1,5 @@
 # HAHAHHA MY NIXOS CONFIG >:))
-{ config, pkgs, ... }:
-
+{ config, pkgs, host, stateVersion, ... }:
 {
   imports =
     [
@@ -12,8 +11,8 @@
   # Docker install/enabling
   virtualisation.docker.enable = true;
   # TEMP: for hosts and hostname nixos
-  networking.hostName = "nixos"; 
+  networking.hostName = host; 
 
-  system.stateVersion = "24.11";
+  system.stateVersion = stateVersion;
 
 }

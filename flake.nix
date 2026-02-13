@@ -3,12 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    
+
     home-manager = {
-        url = "github:nix-community/home-manager";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,35 +20,52 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ragenix, ... }@inputs:
-  let 
+  outputs = { nixpkgs, home-manager, stylix, ragenix, ... }@inputs:
+  let
     system = "x86_64-linux";
-  in
-   {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {inherit inputs;}; 
-        modules = [
-            ./hosts/nixos/configuration.nix
-            ragenix.nixosModules.default
-        ];
-    };
 
-    nixosConfigurations.te14 = nixpkgs.lib.nixosSystem {
+    mkHost = { host, stateVersion }: {
+      nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs;}; 
+        specialArgs = {
+          inherit inputs host stateVersion;
+        };
         modules = [
-            ./hosts/te14/configuration.nix
-            ragenix.nixosModules.default
+          ./hosts/${host}/configuration.nix
+          ragenix.nixosModules.default
         ];
-    };
+      };
 
-    homeConfigurations.terow-rist = home-manager.lib.homeManagerConfiguration {
+      home = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = {
-          inherit inputs;
+          inherit inputs host stateVersion;
         };
-        modules = [ ./home-manager/home.nix ];
+        modules = [
+          ./home-manager/home.nix
+        ];
+      };
+    };
+
+    te14 = mkHost {
+      host = "te14";
+      stateVersion = "25.11";
+    };
+
+    nixosHost = mkHost {
+      host = "nixos";
+      stateVersion = "24.11";
+    };
+
+  in {
+    nixosConfigurations = {
+      te14 = te14.nixos;
+      nixos = nixosHost.nixos;
+    };
+
+    homeConfigurations = {
+      te14 = te14.home;
+      nixos = nixosHost.home;
     };
   };
 }
