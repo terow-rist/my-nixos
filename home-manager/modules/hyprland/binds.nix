@@ -10,7 +10,7 @@
             "$mainMod, P, togglefloating,"
             "$mainMod, J, layoutmsg, orientationcycle"
             "$mainMod, TAB, focuscurrentorlast"
-            "$mainMod, V, exec, cliphist list | $menu --dmenu | cliphist decode | wl-copy"
+            "$mainMod, V, exec, cliphist -db-path /run/user/1000/cliphist/db list | $menu --dmenu | cliphist -db-path /run/user/1000/cliphist/db decode | wl-copy"
             ", Print, exec, sh -c 'grimblast --notify --freeze copysave area $HOME/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png'"
             "$mainMod, L, exec, hyprlock & systemctl suspend"
             "$mainMod, H, exec, pkill -SIGUSR1 -x .waybar-wrapped"

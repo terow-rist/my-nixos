@@ -18,10 +18,11 @@
             "$menu" = "wofi --show drun"; #temp drun
             
             exec-once = [
-                "waybar"
-                "wl-paste --type text --watch cliphist store"
-                "wl-paste --type image --watch cliphist store"
+            "waybar"
+            "wl-paste --type text --watch cliphist -db-path /run/user/1000/cliphist/db store"
+            "wl-paste --type image --watch cliphist -db-path /run/user/1000/cliphist/db store"
             ];
+
 
             xwayland = {
                 force_zero_scaling = true;
