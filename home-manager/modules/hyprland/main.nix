@@ -11,7 +11,11 @@
                 #"HYPRCURSOR_SIZE,24"
             ];
 
-            monitor = ",preferred,auto,auto";
+            monitor = [
+                "eDP-1,1920x1200@60,0x0,auto"
+                "HDMI-A-1,2560x1440@144,0x-1440,auto"
+            ];
+
             "$mainMod" = "SUPER";
             "$terminal" = "alacritty";
             "$fileManager" = "thunar";
