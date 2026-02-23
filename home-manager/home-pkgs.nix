@@ -32,7 +32,8 @@
         nmap
         openfortivpn
         tmux
-        
+        docutils        
+
         # Wayland/Hyprland specific replacements
         waybar             
         wofi               

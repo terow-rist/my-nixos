@@ -6,8 +6,8 @@
     server=1.0.0.1
   '';
   environment.etc."NetworkManager/dnsmasq.d/7g-vpn.conf".text = ''
-    server=/7g.team/10.10.5.2
-    server=/kazdream.kz/10.10.5.2
-    server=/gitlab-pulsar-pages.io/10.10.5.2
+    server=/7g.team/10.10.5.3
+    server=/kazdream.kz/10.10.5.3
+    server=/gitlab-pulsar-pages.io/10.10.5.3
   '';
 }
