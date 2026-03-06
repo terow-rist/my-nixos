@@ -5,12 +5,9 @@
     [
       ./hardware-configuration.nix
       ./local-pkgs.nix
-      ../../nixos/modules
+      ../../modules
     ];
 
-  # Docker install/enabling
-  virtualisation.docker.enable = true;
-  # TEMP: for hosts and hostname nixos
   networking.hostName = host; 
 
   system.stateVersion = stateVersion;
