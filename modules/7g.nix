@@ -13,5 +13,6 @@
   environment.etc.hosts.mode = "0644";
   networking.extraHosts = ''
     10.10.5.4    gitlab-pulsar.kazdream.kz
+    10.10.5.70    harbor.pulsar.kazdream.kz
   '';
 }

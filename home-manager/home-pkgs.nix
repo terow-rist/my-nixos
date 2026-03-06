@@ -33,6 +33,7 @@
         openfortivpn
         tmux
         docutils        
+        sshuttle
 
         # Wayland/Hyprland specific replacements
         waybar             

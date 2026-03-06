@@ -19,5 +19,6 @@
         ./users.nix
         ./wg.nix
         ./ws.nix
+        ./zapret.nix
     ];
 }
