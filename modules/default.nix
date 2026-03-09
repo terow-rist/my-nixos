@@ -6,13 +6,14 @@
         ./bluetooth.nix
         ./boot.nix
         ./docker.nix
+        ./finger.nix
         ./gpg.nix
         ./hyprland.nix
         ./i18n.nix
         ./lock.nix
         ./net.nix
         ./nix.nix
-	    ./nix-ld.nix
+        ./nix-ld.nix
         ./services.nix
         ./time.nix
         # ./ts.nix
