@@ -6,6 +6,8 @@
         # Communication & Web
         telegram-desktop
         teams-for-linux
+        discord
+	    obs-studio
 
         # System utilities (keep these - they work everywhere)
         git
@@ -17,7 +19,7 @@
         sl
         cowsay
         lolcat
-        neofetch
+        fastfetch
         acpi
         lsof
         trashy
@@ -34,6 +36,10 @@
         tmux
         docutils        
         sshuttle
+        screen
+        minicom
+        drawio
+        winbox4
 
         # Wayland/Hyprland specific replacements
         waybar             

@@ -15,7 +15,8 @@
       # docker
       dcu = "docker compose up"; # add flag
       dcd = "docker compose down"; # add flag
-        
+      
+      fortik = "sudo openfortivpn --persistent 1";
     };
     interactiveShellInit = ''
       if not contains -- $HOME/go/bin $PATH
