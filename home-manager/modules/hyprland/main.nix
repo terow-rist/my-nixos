@@ -3,7 +3,7 @@
     wayland.windowManager.hyprland = {
         enable = true;
         systemd.enable = true;
-
+        configType = "hyprlang";
         settings = {
             env = [
                 #standard, may change https://wiki.hypr.land/Configuring/Environment-variables/
@@ -100,7 +100,6 @@
             };
 
             dwindle = {
-                pseudotile = true;
                 preserve_split = true;
             };
 
@@ -122,7 +121,6 @@
                 # XWayland helper windows: floating, no focus
                 "float on, no_focus on, match:class ^$, match:title ^$, match:xwayland true, match:fullscreen false, match:pin false"
             ];
-
         };
     };
 

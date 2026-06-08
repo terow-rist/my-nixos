@@ -7,10 +7,11 @@
         telegram-desktop
         teams-for-linux
         discord
-	    obs-studio
+        obs-studio
 
         # System utilities (keep these - they work everywhere)
         git
+        net-snmp
         wget
         dig
         htop
@@ -40,7 +41,7 @@
         minicom
         drawio
         winbox4
-
+        dmenu-wayland
         # Wayland/Hyprland specific replacements
         waybar             
         wofi               
@@ -61,7 +62,7 @@
         thunar        # File manager (better than pcmanfm for Wayland)
         pass-wayland
         gnupg
-                
+        dmidecode
         # Terminal
         alacritty
         
@@ -69,7 +70,7 @@
         go
         gopls
         postman
-        vscode
+        vscodium
         gnumake
         gcc
         python3

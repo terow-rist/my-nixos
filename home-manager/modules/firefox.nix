@@ -1,8 +1,9 @@
 { config, pkgs, lib, host, ... }:
 {
   programs.firefox.enable = true;
+  programs.firefox.configPath = ".mozilla/firefox";
 
-  home.file.".config/mozilla/firefox/5satmgyo.default/user.js" =
+  home.file.".mozilla/firefox/5satmgyo.default/user.js" =
     lib.mkIf (host == "te14") {
       text = ''
         user_pref("layout.css.devPixelsPerPx", "1.3");
