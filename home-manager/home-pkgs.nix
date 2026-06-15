@@ -8,7 +8,7 @@
         teams-for-linux
         discord
         obs-studio
-
+        anydesk
         # System utilities (keep these - they work everywhere)
         git
         net-snmp
@@ -18,6 +18,7 @@
         sshpass
         tree
         sl
+        sshuttle
         cowsay
         lolcat
         fastfetch
