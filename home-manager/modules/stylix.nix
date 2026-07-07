@@ -28,7 +28,7 @@
     targets = {
       hyprland.enable = true;
       waybar.enable = true;
-      hyprpaper.enable = false;
+      hyprpaper.enable = true;
       firefox.enable = false;
       helix.enable = false;
       wofi.enable = false;
