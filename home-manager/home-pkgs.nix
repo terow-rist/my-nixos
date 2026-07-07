@@ -8,7 +8,7 @@
         teams-for-linux
         discord
         obs-studio
-        anydesk
+        mpv
         # System utilities (keep these - they work everywhere)
         git
         net-snmp
@@ -31,6 +31,7 @@
         zip
         unzip
         tcpdump
+        dpdk
         libcap
         rsync
         nmap
@@ -97,5 +98,7 @@
         # Optional but useful
         blueman            # Bluetooth manager
         networkmanagerapplet  # Network management
+        smassh
+	wpsoffice
     ];
 }

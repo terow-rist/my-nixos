@@ -23,8 +23,8 @@
     enable = true;
     enableReleaseChecks = false;
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-    
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-savanna.yaml";
+    image = "${inputs.self}/images/miau.png";
     targets = {
       hyprland.enable = true;
       waybar.enable = true;

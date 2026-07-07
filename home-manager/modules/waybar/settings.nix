@@ -5,17 +5,17 @@ let
     font = "Maple Mono";
     font_size = "18px";
     font_weight = "bold";
-    text_color = "#FBF1C7";
-    background_0 = "#1D2021";
-    background_1 = "#282828";
-    border_color = "#928374";
-    red = "#CC241D";
-    green = "#98971A";
-    yellow = "#FABD2F";
-    blue = "#458588";
-    magenta = "#B16286";
-    cyan = "#689D6A";
-    orange = "#D65D0E";
+    text_color = "#ECF4EE";
+    background_0 = "#171C19";
+    background_1 = "#232A25";
+    border_color = "#78877D";
+    red = "#B16139";
+    green = "#489963";
+    yellow = "#A07E3B";
+    blue = "#478C90";
+    magenta = "#55859B";
+    cyan = "#1C9AA0";
+    orange = "#9F713C";
     opacity = "1";
     indicator_height = "2px";
   };
@@ -49,7 +49,7 @@ in
     clock = {
       calendar = {
         format = {
-          today = "<span color='#98971A'><b>{}</b></span>";
+          today = "<span color='#489963'><b>{}</b></span>";
         };
       };
       format = "  {:%H:%M}";
@@ -150,7 +150,7 @@ in
     "hyprland/language" = {
       tooltip = true;
       tooltip-format = "Keyboard layout";
-      format = "<span foreground='#FABD2F'> </span> {}";
+      format = "<span foreground='#A07E3B'> </span> {}";
       format-fr = "FR";
       format-en = "US";
       on-click = "hyprctl switchxkblayout at-translated-set-2-keyboard next";

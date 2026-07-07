@@ -1,9 +1,13 @@
-{ pkgs, inputs, ... }:
+#
+# NOW I AM NOT USING THIS :D
+#
+{ pkgs, inputs, lib, ... }:
 
 let
   wallpapers = [
     "${inputs.self}/images/black-hole.png"
     "${inputs.self}/images/anime_skull.png"
+    "${inputs.self}/images/miau.png"
     "${inputs.self}/images/vabd.jpg"
   ];
 
@@ -23,7 +27,7 @@ in
   ];
 
   services.hyprpaper = {
-    enable = true;
+    enable = lib.mkForce false;
 
     settings = {
       ipc = "on";

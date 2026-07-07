@@ -39,8 +39,8 @@
                 border_size = 2;
 
                 # https://wiki.hypr.land/Configuring/Variables/#variable-types for info about colors
-                "col.active_border" = lib.mkForce "rgba(d65d0eff) rgba(98971aff) 45deg";
-                "col.inactive_border" = lib.mkForce "rgba(3c3836ff)";
+                "col.active_border" = lib.mkForce "rgba(1c9aa0ff) rgba(489963ff) 45deg";
+                "col.inactive_border" = lib.mkForce "rgba(232a25ff)";
 
                 resize_on_border = true;
 

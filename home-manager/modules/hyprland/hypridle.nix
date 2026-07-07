@@ -1,3 +1,6 @@
+#
+# NOW I AM NOT USING THIS :D
+#
 {
   services.hypridle = {
     enable = false;
