@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
     nixpkgs.config.allowUnfree = true;
     
@@ -9,6 +9,7 @@
         discord
         obs-studio
         mpv
+        yandex-music
         # System utilities (keep these - they work everywhere)
         git
         net-snmp
@@ -44,6 +45,9 @@
         drawio
         winbox4
         dmenu-wayland
+        jq
+        arp-scan
+        pigz
         # Wayland/Hyprland specific replacements
         waybar             
         wofi               
@@ -94,11 +98,11 @@
         wayland-utils      # Wayland development utilities
         wayland-protocols  # Wayland protocols
         xdg-desktop-portal-hyprland  # Desktop portal for Hyprland
-        
+
         # Optional but useful
         blueman            # Bluetooth manager
         networkmanagerapplet  # Network management
         smassh
-	wpsoffice
+	    wpsoffice
     ];
 }

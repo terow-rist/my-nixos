@@ -22,6 +22,10 @@
       if not contains -- $HOME/go/bin $PATH
       set -x PATH $HOME/go/bin $PATH
       end
+
+      if not contains -- $HOME/.local/bin $PATH
+        set -x PATH $HOME/.local/bin $PATH
+      end
     '';
 
     shellInit = ''

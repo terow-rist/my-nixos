@@ -75,11 +75,5 @@
             ",XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-"
         ];
 
-        bindl = [
-            ", XF86AudioNext,  exec, playerctl next"
-            ", XF86AudioPause, exec, playerctl play-pause"
-            ", XF86AudioPlay,  exec, playerctl play-pause"
-            ", XF86AudioPrev,  exec, playerctl previous"
-        ];
     };
 }
