@@ -5,7 +5,7 @@
       login.fprintAuth = true;
       sudo.fprintAuth = true;
       greetd.fprintAuth = true;
-      hyprlock.fprintAuth = true;
+      swaylock.fprintAuth = true;
     };
 
     polkit.extraConfig = ''

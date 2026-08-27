@@ -5,17 +5,17 @@ let
     font = "Maple Mono";
     font_size = "18px";
     font_weight = "bold";
-    text_color = "#ECF4EE";
-    background_0 = "#171C19";
-    background_1 = "#232A25";
-    border_color = "#78877D";
-    red = "#B16139";
-    green = "#489963";
-    yellow = "#A07E3B";
-    blue = "#478C90";
-    magenta = "#55859B";
-    cyan = "#1C9AA0";
-    orange = "#9F713C";
+    text_color = "#cdcdcd";
+    background_0 = "#212121";
+    background_1 = "#303030";
+    border_color = "#707070";
+    red = "#f92672";
+    green = "#a6e22e";
+    yellow = "#e6db74";
+    blue = "#66d9ef";
+    magenta = "#9e6ffe";
+    cyan = "#708387";
+    orange = "#fd971f";
     opacity = "1";
     indicator_height = "2px";
   };
@@ -31,7 +31,7 @@ in
     margin-right = 0;
     modules-left = [
       "custom/launcher"
-      "hyprland/workspaces"
+      "niri/workspaces"
       "tray"
     ];
     modules-center = [ "clock" ];
@@ -42,14 +42,14 @@ in
       "pulseaudio"
       "network"
       "battery"
-      "hyprland/language"
+      "niri/language"
       "custom/notification"
       "custom/power-menu"
     ];
     clock = {
       calendar = {
         format = {
-          today = "<span color='#489963'><b>{}</b></span>";
+          today = "<span color='#a6e22e'><b>{}</b></span>";
         };
       };
       format = "  {:%H:%M}";
@@ -57,54 +57,26 @@ in
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       format-alt = "  {:%d/%m}";
     };
-    "hyprland/workspaces" = {
-      active-only = false;
-      disable-scroll = true;
-      format = "{icon}";
-      on-click = "activate";
-      format-icons = {
-        "1" = "I";
-        "2" = "II";
-        "3" = "III";
-        "4" = "IV";
-        "5" = "V";
-        "6" = "VI";
-        "7" = "VII";
-        "8" = "VIII";
-        "9" = "IX";
-        "10" = "X";
-        sort-by-number = true;
-      };
-      persistent-workspaces = {
-        "1" = [ ];
-        "2" = [ ];
-        "3" = [ ];
-        "4" = [ ];
-        "5" = [ ];
-        "6" = [ ];
-        "7" = [ ];
-        "8" = [ ];
-        "9" = [ ];
-        "10" = [ ];
-      };
+    "niri/workspaces" = {
+      disable-click = false;
     };
     cpu = {
       format = "<span foreground='${green}'> </span> {usage}%";
       format-alt = "<span foreground='${green}'> </span> {avg_frequency} GHz";
       interval = 2;
-      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
+      on-click-right = "foot --app-id float-btop -e btop";
     };
     memory = {
       format = "<span foreground='${cyan}'>󰟜 </span>{}%";
       format-alt = "<span foreground='${cyan}'>󰟜 </span>{used} GiB"; # 
       interval = 2;
-      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
+      on-click-right = "foot --app-id float-btop -e btop";
     };
     disk = {
       # path = "/";
       format = "<span foreground='${orange}'>󰋊 </span>{percentage_used}%";
       interval = 60;
-      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
+      on-click-right = "foot --app-id float-btop -e btop";
     };
     network = {
       format-wifi = "<span foreground='${magenta}'> </span> {signalStrength}%";
@@ -147,20 +119,19 @@ in
       tooltip = true;
       tooltip-format = "{time}";
     };
-    "hyprland/language" = {
+    "niri/language" = {
       tooltip = true;
       tooltip-format = "Keyboard layout";
-      format = "<span foreground='#A07E3B'> </span> {}";
+      format = "<span foreground='#e6db74'> </span> {}";
       format-fr = "FR";
       format-en = "US";
-      on-click = "hyprctl switchxkblayout at-translated-set-2-keyboard next";
+      on-click = "niri msg action switch-layout next";
     };
     "custom/launcher" = {
       format = "";
-      on-click = "random-wallpaper"; #fix in future
-      on-click-right = "wofi --show drun";
+      on-click = "wofi --show drun";
       tooltip = "true";
-      tooltip-format = "Random Wallpaper";
+      tooltip-format = "Launcher";
     };
     "custom/notification" = {
       tooltip = true;

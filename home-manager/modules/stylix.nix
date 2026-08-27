@@ -23,17 +23,15 @@
     enable = true;
     enableReleaseChecks = false;
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-savanna.yaml";
-    image = "${inputs.self}/images/miau.png";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/hardcore.yaml";
+    image = "${inputs.self}/images/kamina.png";
     targets = {
-      hyprland.enable = true;
       waybar.enable = true;
-      hyprpaper.enable = true;
+      foot.enable = true;
+      swaylock.enable = true;
       firefox.enable = false;
       helix.enable = false;
       wofi.enable = false;
-      hyprlock.enable = false;
-      alacritty.enable = false;
     };
     
     cursor = {

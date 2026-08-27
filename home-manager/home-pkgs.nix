@@ -1,7 +1,7 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
     nixpkgs.config.allowUnfree = true;
-    
+
     home.packages = with pkgs; [
         # Communication & Web
         telegram-desktop
@@ -48,18 +48,17 @@
         jq
         arp-scan
         pigz
-        # Wayland/Hyprland specific replacements
+        # Wayland-specific replacements
         waybar             
         wofi               
         # rofi-wayland     # Alternative to wofi (more powerful)
         swaynotificationcenter    # Notification daemon (replaces dunst)
         wlogout            # Logout menu
-        hyprlock
+        awww               # Wallpaper daemon (pushes the stylix wallpaper at startup), formerly swww
 
         # Wayland utilities
         wl-clipboard       # Clipboard utilities (wl-copy, wl-paste)
         cliphist           # Clipboard history
-        grimblast          # Screenshot utility (replaces flameshot)
         wf-recorder        # Screen recording
         brightnessctl      # Brightness control (keep this)
         pamixer            # Audio control
@@ -69,9 +68,7 @@
         pass-wayland
         gnupg
         dmidecode
-        # Terminal
-        alacritty
-        
+
         # Development tools (keep these)
         go
         gopls
@@ -97,7 +94,6 @@
         # Wayland-specific tools
         wayland-utils      # Wayland development utilities
         wayland-protocols  # Wayland protocols
-        xdg-desktop-portal-hyprland  # Desktop portal for Hyprland
 
         # Optional but useful
         blueman            # Bluetooth manager

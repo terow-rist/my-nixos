@@ -8,10 +8,10 @@
         ./docker.nix
         ./finger.nix
         ./gpg.nix
-        ./hyprland.nix
         ./i18n.nix
         ./lock.nix
         ./net.nix
+        ./niri.nix
         ./nix.nix
         ./nix-ld.nix
         ./services.nix

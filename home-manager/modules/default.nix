@@ -1,8 +1,8 @@
 {
     imports = [
-        ./hyprland
+        ./niri
         ./waybar
-        ./alacritty.nix
+        ./foot.nix
         ./denv.nix
         ./firefox.nix
         ./fish.nix
