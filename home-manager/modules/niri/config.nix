@@ -117,6 +117,7 @@ in
         Mod+Shift+Q { quit; }
         Mod+E { spawn "${fileManager}"; }
         Mod+F { toggle-window-floating; }
+        Mod+Shift+F { maximize-column; }
         Mod+R { spawn-sh "${menu}"; }
         Mod+V { spawn-sh "cliphist -db-path ${cliphistDb} list | wofi --dmenu | cliphist -db-path ${cliphistDb} decode | wl-copy"; }
         Mod+L { spawn-sh "swaylock & systemctl suspend"; }

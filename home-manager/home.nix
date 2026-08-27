@@ -15,7 +15,7 @@
   
   # to silence this shit.
   # gtk.gtk4.theme = null;
-
+  wayland.windowManager.hyprland.configType = "hyprlang";
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
