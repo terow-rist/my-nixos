@@ -59,6 +59,12 @@ in
     };
     "niri/workspaces" = {
       disable-click = false;
+      # {index} (position on the workspace's own output) rather than the
+      # default {value} (which falls back to showing the workspace's name):
+      # named workspaces are pinned per-monitor with distinct names (e.g.
+      # the external monitor's are "e-1".."e-10" to avoid colliding with the
+      # laptop's "1".."10"), but both should still just read 1-10 here.
+      format = "{index}";
     };
     cpu = {
       format = "<span foreground='${green}'> </span> {usage}%";

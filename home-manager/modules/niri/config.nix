@@ -28,6 +28,13 @@ in
             }
         }
 
+        // With an external monitor plugged into the laptop, keybinds like
+        // Mod+Left/Right stayed on whichever output last had focus instead
+        // of the one the mouse is actually over. This makes hovering a
+        // window/output focus it, same as moving the mouse to the other
+        // monitor did on the previous WM.
+        focus-follows-mouse
+
         // Without this block tap-to-click is off entirely (niri leaves
         // touchpad features disabled unless listed), which is why taps -
         // including a quick double-tap for double-click-to-select - did
@@ -50,6 +57,38 @@ in
         position x=0 y=-1440
     }
 
+    // Named workspaces never disappear even while empty, unlike niri's
+    // normal dynamic workspaces (which collapse to a single trailing empty
+    // one) - this keeps 10 slots permanently visible on *each* monitor.
+    // They still get addressed by position (Mod+1..0 below use bare,
+    // unquoted indices), so this is layered on top of the per-monitor
+    // "Mod+N targets whichever output is focused" behavior, not instead of
+    // it - the names below exist only to pin them to an output and keep
+    // them alive; waybar is set to show {index} rather than the name, so
+    // both monitors still just read 1-10. Names must be config-wide unique,
+    // hence the "e-" prefix on the external monitor's set.
+    workspace "1" { open-on-output "eDP-1"; }
+    workspace "2" { open-on-output "eDP-1"; }
+    workspace "3" { open-on-output "eDP-1"; }
+    workspace "4" { open-on-output "eDP-1"; }
+    workspace "5" { open-on-output "eDP-1"; }
+    workspace "6" { open-on-output "eDP-1"; }
+    workspace "7" { open-on-output "eDP-1"; }
+    workspace "8" { open-on-output "eDP-1"; }
+    workspace "9" { open-on-output "eDP-1"; }
+    workspace "10" { open-on-output "eDP-1"; }
+
+    workspace "e-1" { open-on-output "HDMI-A-1"; }
+    workspace "e-2" { open-on-output "HDMI-A-1"; }
+    workspace "e-3" { open-on-output "HDMI-A-1"; }
+    workspace "e-4" { open-on-output "HDMI-A-1"; }
+    workspace "e-5" { open-on-output "HDMI-A-1"; }
+    workspace "e-6" { open-on-output "HDMI-A-1"; }
+    workspace "e-7" { open-on-output "HDMI-A-1"; }
+    workspace "e-8" { open-on-output "HDMI-A-1"; }
+    workspace "e-9" { open-on-output "HDMI-A-1"; }
+    workspace "e-10" { open-on-output "HDMI-A-1"; }
+
     layout {
         gaps 0
 
@@ -66,20 +105,6 @@ in
             inactive-color "${border-inactive}"
         }
     }
-
-    // Named workspaces always exist, even empty - unlike niri's normal
-    // dynamic workspaces, which only show up once you've switched to them.
-    // This keeps all 10 permanently visible in the waybar workspace list.
-    workspace "1"
-    workspace "2"
-    workspace "3"
-    workspace "4"
-    workspace "5"
-    workspace "6"
-    workspace "7"
-    workspace "8"
-    workspace "9"
-    workspace "10"
 
     spawn-at-startup "waybar"
     spawn-at-startup "awww-daemon"
@@ -146,27 +171,32 @@ in
         Mod+Up    { focus-window-up; }
         Mod+Down  { focus-window-down; }
 
-        Mod+1 { focus-workspace "1"; }
-        Mod+2 { focus-workspace "2"; }
-        Mod+3 { focus-workspace "3"; }
-        Mod+4 { focus-workspace "4"; }
-        Mod+5 { focus-workspace "5"; }
-        Mod+6 { focus-workspace "6"; }
-        Mod+7 { focus-workspace "7"; }
-        Mod+8 { focus-workspace "8"; }
-        Mod+9 { focus-workspace "9"; }
-        Mod+0 { focus-workspace "10"; }
+        // Bare (unquoted) indices, not quoted names: these address the Nth
+        // workspace on whichever monitor is currently focused, per niri's
+        // native per-monitor workspace model. Quoted names would instead
+        // refer to a single global workspace pinned to one output, which is
+        // what caused Mod+2 to always jump back to the laptop screen.
+        Mod+1 { focus-workspace 1; }
+        Mod+2 { focus-workspace 2; }
+        Mod+3 { focus-workspace 3; }
+        Mod+4 { focus-workspace 4; }
+        Mod+5 { focus-workspace 5; }
+        Mod+6 { focus-workspace 6; }
+        Mod+7 { focus-workspace 7; }
+        Mod+8 { focus-workspace 8; }
+        Mod+9 { focus-workspace 9; }
+        Mod+0 { focus-workspace 10; }
 
-        Mod+Shift+1 { move-column-to-workspace "1"; }
-        Mod+Shift+2 { move-column-to-workspace "2"; }
-        Mod+Shift+3 { move-column-to-workspace "3"; }
-        Mod+Shift+4 { move-column-to-workspace "4"; }
-        Mod+Shift+5 { move-column-to-workspace "5"; }
-        Mod+Shift+6 { move-column-to-workspace "6"; }
-        Mod+Shift+7 { move-column-to-workspace "7"; }
-        Mod+Shift+8 { move-column-to-workspace "8"; }
-        Mod+Shift+9 { move-column-to-workspace "9"; }
-        Mod+Shift+0 { move-column-to-workspace "10"; }
+        Mod+Shift+1 { move-column-to-workspace 1; }
+        Mod+Shift+2 { move-column-to-workspace 2; }
+        Mod+Shift+3 { move-column-to-workspace 3; }
+        Mod+Shift+4 { move-column-to-workspace 4; }
+        Mod+Shift+5 { move-column-to-workspace 5; }
+        Mod+Shift+6 { move-column-to-workspace 6; }
+        Mod+Shift+7 { move-column-to-workspace 7; }
+        Mod+Shift+8 { move-column-to-workspace 8; }
+        Mod+Shift+9 { move-column-to-workspace 9; }
+        Mod+Shift+0 { move-column-to-workspace 10; }
 
         // Closest analogue to Hyprland's special:magic scratch workspace:
         // a regular named workspace you jump to/from (it replaces the view
