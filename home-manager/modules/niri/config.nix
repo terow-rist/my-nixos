@@ -120,6 +120,18 @@ in
 
     screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 
+    // Many apps (GTK4/libadwaita, Chromium-based) draw their own rounded
+    // corners client-side, but niri's border defaults to square corners -
+    // without this, the border draws a plain rectangle that pokes past the
+    // app's already-rounded corner, looking like it's "trying" to be
+    // rounded but isn't. This tells the border/focus-ring to round to
+    // match, and clips the window itself to the same radius for apps that
+    // don't round their own corners.
+    window-rule {
+        geometry-corner-radius 16
+        clip-to-geometry true
+    }
+
     // A window spawned as `foot --app-id float-btop ...` (see waybar's
     // cpu/memory on-click-right) opens floating instead of tiled.
     window-rule {
