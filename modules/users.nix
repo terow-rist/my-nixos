@@ -4,7 +4,7 @@
     users.users.terow-rist = {
         isNormalUser = true;
         description = "Madikozha Issayev";
-        extraGroups = [ "networkmanager" "wheel" "docker" "wireshark" ];
+        extraGroups = [ "networkmanager" "wheel" "docker" "wireshark" "dialout" ];
         shell = pkgs.fish;
     };
 }

@@ -53,20 +53,29 @@ in
     }
 
     output "HDMI-A-1" {
-        mode "2560x1440@144"
-        position x=0 y=-1440
+        mode "1920x1080@60"
+        position x=0 y=-1080
     }
 
     // Named workspaces never disappear even while empty, unlike niri's
     // normal dynamic workspaces (which collapse to a single trailing empty
-    // one) - this keeps 10 slots permanently visible on *each* monitor.
-    // They still get addressed by position (Mod+1..0 below use bare,
-    // unquoted indices), so this is layered on top of the per-monitor
-    // "Mod+N targets whichever output is focused" behavior, not instead of
-    // it - the names below exist only to pin them to an output and keep
-    // them alive; waybar is set to show {index} rather than the name, so
-    // both monitors still just read 1-10. Names must be config-wide unique,
-    // hence the "e-" prefix on the external monitor's set.
+    // one) - this keeps 10 slots permanently visible on the laptop screen,
+    // which is always present. They still get addressed by position
+    // (Mod+1..0 below use bare, unquoted indices), so this is layered on
+    // top of the per-monitor "Mod+N targets whichever output is focused"
+    // behavior, not instead of it - the names below exist only to pin them
+    // to eDP-1 and keep them alive; waybar is set to show {index} rather
+    // than the name, so the laptop screen still just reads 1-10.
+    //
+    // The external monitor deliberately has no such pinned/named set: named
+    // workspaces are never cleaned up, so a set pinned to HDMI-A-1 would
+    // keep existing (and fall back onto eDP-1) even after that monitor is
+    // unplugged, doubling up to 20 workspaces on the laptop screen alone.
+    // Left as plain dynamic workspaces instead, the external monitor still
+    // gets its own fully independent 1..10 range via the same bare-index
+    // binds whenever it's connected (niri creates them on demand, up to a
+    // trailing empty one), and simply has nothing left behind once it's
+    // unplugged.
     workspace "1" { open-on-output "eDP-1"; }
     workspace "2" { open-on-output "eDP-1"; }
     workspace "3" { open-on-output "eDP-1"; }
@@ -77,17 +86,6 @@ in
     workspace "8" { open-on-output "eDP-1"; }
     workspace "9" { open-on-output "eDP-1"; }
     workspace "10" { open-on-output "eDP-1"; }
-
-    workspace "e-1" { open-on-output "HDMI-A-1"; }
-    workspace "e-2" { open-on-output "HDMI-A-1"; }
-    workspace "e-3" { open-on-output "HDMI-A-1"; }
-    workspace "e-4" { open-on-output "HDMI-A-1"; }
-    workspace "e-5" { open-on-output "HDMI-A-1"; }
-    workspace "e-6" { open-on-output "HDMI-A-1"; }
-    workspace "e-7" { open-on-output "HDMI-A-1"; }
-    workspace "e-8" { open-on-output "HDMI-A-1"; }
-    workspace "e-9" { open-on-output "HDMI-A-1"; }
-    workspace "e-10" { open-on-output "HDMI-A-1"; }
 
     layout {
         gaps 0

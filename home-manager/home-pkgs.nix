@@ -99,6 +99,6 @@
         blueman            # Bluetooth manager
         networkmanagerapplet  # Network management
         smassh
-	    wpsoffice
+        libreoffice-fresh   # native Wayland (GTK3) support, unlike WPS - no XWayland dependency on niri
     ];
 }

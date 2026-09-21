@@ -23,5 +23,6 @@
     10.10.5.4           pulsar.gitlab-pulsar-pages.io
     10.10.5.70          harbor.pulsar.kazdream.kz
     10.10.5.72          youtrack.pulsar.kazdream.kz
+    10.10.5.4           gitlab-pulsar-pages.kazdream.kz
   '';
 }

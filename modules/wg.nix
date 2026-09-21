@@ -45,6 +45,7 @@
               "10.0.233.0/24"
               "10.10.12.0/24"
               "10.10.10.0/24"
+              "10.100.0.0/24"
             ];
             endpoint = "45.86.82.14:13231";
             presharedKeyFile = config.age.secrets.wg-jubber-presh.path;
