@@ -53,8 +53,8 @@ in
     }
 
     output "HDMI-A-1" {
-        mode "1920x1080@60"
-        position x=0 y=-1080
+        mode "2560x1440@144"
+        position x=0 y=-1440
     }
 
     // Named workspaces never disappear even while empty, unlike niri's
@@ -155,7 +155,8 @@ in
         Mod+Shift+F { maximize-column; }
         Mod+R { spawn-sh "${menu}"; }
         Mod+V { spawn-sh "cliphist -db-path ${cliphistDb} list | wofi --dmenu | cliphist -db-path ${cliphistDb} decode | wl-copy"; }
-        Mod+L { spawn-sh "swaylock & systemctl suspend"; }
+        Mod+L { spawn-sh "swaylock"; }
+        Mod+Shift+L { spawn-sh "swaylock & systemctl suspend"; }
         Mod+H { spawn-sh "pkill -SIGUSR1 -x .waybar-wrapped"; }
         Mod+X { spawn "passmenu"; }
 
