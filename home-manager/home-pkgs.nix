@@ -83,7 +83,7 @@
         virtualenv
                 
         # DevOps tools (keep these)
-        kubernetes
+        (lib.hiPrio kubernetes)  # minikube also ships bin/kubectl; prefer this one
         minikube
         ansible
         nginx
