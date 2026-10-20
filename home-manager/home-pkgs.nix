@@ -44,6 +44,7 @@
         minicom
         drawio
         winbox4
+        rustdesk
         dmenu-wayland
         jq
         arp-scan

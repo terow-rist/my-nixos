@@ -17,6 +17,8 @@
       dcd = "docker compose down"; # add flag
       
       fortik = "sudo openfortivpn --persistent 1";
+
+      antilid = "systemd-inhibit --what=handle-lid-switch:sleep sleep infinity";
     };
     interactiveShellInit = ''
       if not contains -- $HOME/go/bin $PATH
